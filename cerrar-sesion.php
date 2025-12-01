@@ -1,3 +1,7 @@
+<head>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
 <?php
 
 // Cerramos sesion como buena practica

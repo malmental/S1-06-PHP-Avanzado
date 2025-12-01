@@ -4,66 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de registro</title>
-    
-    <style>
-        
-        body 
-        {   font-family: JetBrains Mono, sans-serif;
-            background-color:wheat;
-            display: flex;
-            justify-content: center; 
-            align-items: center;
-            height: 100vh; }
-        
-        h1 
-        {   font-size: 2.5rem;}
-
-        .form-group 
-        {   margin-bottom: 1rem;
-            font-size: 1.3rem;}
-
-        label 
-        {   display: block;
-            margin-bottom: 0.5rem;}
-
-        input[type="text"], input[type="email"], select 
-        {   width: 100%;
-            padding: 0.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;}
-
-        button 
-        {   background-color:darksalmon;
-            padding: 0.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;}
-
-    </style>
-
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <div class="form-container">
     <!--Aqui es importante comprender action="procesar.php" donde se enviarán los datos del registro, utilizando un method="post" que oculta la peticion en la URL, GET es posible que muestre datos privados en la URL-->
         <h1>Formulario de registro</h1>
-        <form action="procesar.php" method="get">
+        <form action="procesar.php" method="post">
 
             <div class="form-group">
-                <label for="nombre">Nombre de usuario: </label>
-                <input type="text" id="nombre" name="nombre_usuario" requireded>
+                <label for="nombre">Tu nombre de usuario: </label>
+                <input type="text" id="nombre" name="nombre_usuario" required placeholder="Tu nombre" [A-Za-zá-úÁ-Ú0-9]+(?: [A-Za-zá-úÁ-Ú0-9]+)*">
             </div>
 
             <div class="form-group">
                 <label for="email">Correo electronico:</label>
-                <input type="email" id="email" name="email_usuario" required>
+                <input type="email" id="email" name="email_usuario" required placeholder="nombre@example.com">
             </div>
             
             <div class="form-group">
                 <label for="biografia">Descríbete en una palabra:</label>
-                <input type="text" id="biografia" name="biografia_usuario" placeholder="Solo una...">
+                <input type="text" id="biografia" name="biografia_usuario" placeholder="Ej: aventurero">
             </div>
 
             <div class="form-group">
