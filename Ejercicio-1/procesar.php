@@ -3,21 +3,17 @@
 </head>
 
 <?php
-
-// Este es el archivo que recibe y procesa los datos
-// Iniciar la sesión SIEMPRE debe ir al principio del documento, antes de cualquier HTML o salida:
 session_start();
 
 // Paso 1: Verificar si el formulario fue enviado por método POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Paso 2: Recibir los datos usando la variabl superglobal $_POST
-    // $_POST es un Array asociativo que contiene los datos enviados por un formulario con method="post"
     // La clave del array es el 'name' que pusiste en el HTML.
     $nombre = $_POST['nombre_usuario'];
     $email = $_POST['email_usuario'];
-    $ciudad = $_POST['ciudad_usuario'];
     $biografia = $_POST['biografia_usuario'];
+    $ciudad = $_POST['ciudad_usuario'];
 
     // Paso 3: mostramos los valores en pantalla
     echo "<h1>Datos recibidos</h1>";
