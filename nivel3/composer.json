@@ -1,0 +1,15 @@
+{
+    "name": "orlandorojas/nivel3",
+    "autoload": {
+        "psr-4": {
+            "Orlandorojas\\Nivel3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "malmental",
+            "email": "orlandorojasoyarzun@gmail.com"
+        }
+    ],
+    "require": {}
+}
