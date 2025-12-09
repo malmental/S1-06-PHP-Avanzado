@@ -1,0 +1,10 @@
+{
+    "name": "orlandorojas/app3",
+    "description": "PHPUnitTest",
+    "autoload": {
+        "psr-4": {
+            "Orlandorojas\\App3\\": "src/"
+        }
+    },
+    "require": {}
+}

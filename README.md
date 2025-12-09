@@ -7,4 +7,4 @@
   
   ## 🚀 Instal·lació  
   1. Clonar el repositori: `git clone ...`  
-  2. Ejecutar ficheros 
+  2. Ejecutar ficheros *.php, *.html
