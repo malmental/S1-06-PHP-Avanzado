@@ -1,31 +1,33 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario PHP Avanzado</title>
 </head>
+
 <body>
     <h1>Tasca S1.06.Php_Avanzado</h1>
-
-    <form action="session.php" method="get">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <label>
             Tu nombre:
-            <input type="text" name="Nombre" id="nombre" required>
+            <input type="text" name="NOMBRE" id="nombre" required>
         </label>
         <br><br>
         <label>
             Tu correo electronico:
-            <input type="text" name="Email" id="email" required>
+            <input type="text" name="EMAIL" id="email" required>
         </label>
         <br><br>
         <label>
             Tu numero de telefono:
-            <input type="number" name="Telefono" id="telefono" required>
+            <input type="number" name="TELEFONO" id="telefono" required>
         </label>
         <br><br>
         <button>Enviar</button>
     </form>
-
 </body>
+
 </html>
