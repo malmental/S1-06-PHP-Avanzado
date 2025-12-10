@@ -15,7 +15,13 @@ session_start();
 <body>
     <h1>Formulario de registro</h1>
 
- 
+    <?php
+
+    if (isset($_SESSION['error'])) {
+        echo "Error: " . ($_SESSION['error']);
+        unset($_SESSION['error']);
+    }
+    ?>
 
     <form action="procesar.php" method="post">
         <label>

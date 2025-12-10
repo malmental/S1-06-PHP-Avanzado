@@ -25,7 +25,7 @@ try {
     
     // verificamos caracteres especiales
     if (!preg_match("/^[\p{L}' -]+$/u", $nombre_usuario)) {
-        throw new NameException("No puedes ingresar caracteres especiales");
+        throw new NameException("Tu nombre solo con letras");
     }
 
     // Email valido
@@ -35,10 +35,11 @@ try {
 
     // Que el telefono sea un numero
     if(!is_numeric($numero_de_telefono)) {
-        throw new PhoneException ("Debes ingresar numeros");
+        throw new PhoneException ("Tu telefono solo con numeros");
     }
 
     // Si la validacion salió bien, aqui se guaardan los datos
+    $_SESSION['usuario'] = true;
     $_SESSION['nombre_usuario'] = $nombre_usuario;
     $_SESSION['correo_electronico'] = $correo_electronico;
     $_SESSION['numero_de_telefono'] = $numero_de_telefono;
@@ -50,22 +51,22 @@ try {
 
 } catch (EmptyFieldException $e) {
     $_SESSION['error'] = $e->getMessage();
-    header("Location: formulario-registro.html");
+    header("Location: formulario-registro.php");
     exit;
 
 } catch (NameException $e) {
     $_SESSION['error'] = $e->getMessage();
-    header("Location: formulario-registro.html");
+    header("Location: formulario-registro.php");
     exit;
 
 } catch (PhoneException $e) {
     $_SESSION['error'] = $e->getMessage();
-    header("Location: formulario-registro.html");
+    header("Location: formulario-registro.php");
     exit;
 
 } catch (EmailException $e) {
     $_SESSION['error'] = $e->getMessage();
-    header("Location: formulario-registro.html");
+    header("Location: formulario-registro.php");
     exit;
 }
     

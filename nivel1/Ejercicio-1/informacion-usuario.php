@@ -23,7 +23,7 @@ session_start(); ?>
     } else {
         echo "<h1>Acceso negado</h1>";
         echo "<p>Sesion no iniciada, porfavor registrate</p>";
-        echo "<a href='formulario.html'>Ir al formulario</a>";
+        echo "<a href='formulario.php'>Ir al formulario</a>";
     }
     ?>
     
