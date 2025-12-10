@@ -20,22 +20,22 @@ try {
 
     // Verificamos el campo vacio
     if (empty($nombre_usuario) || empty($correo_electronico) || empty($numero_de_telefono)) {
-        throw new EmptyFieldException( "Todos los campos son requeridos.");
+        throw new EmptyFieldException;
     }
     
     // verificamos caracteres especiales
     if (!preg_match("/^[\p{L}' -]+$/u", $nombre_usuario)) {
-        throw new NameException("Tu nombre solo con letras");
+        throw new NameException;
     }
 
     // Email valido
     if(!filter_var($correo_electronico, FILTER_VALIDATE_EMAIL)) {
-        throw new EmailException("Correo electronico invalido");
+        throw new EmailException;
     }
 
     // Que el telefono sea un numero
     if(!is_numeric($numero_de_telefono)) {
-        throw new PhoneException ("Tu telefono solo con numeros");
+        throw new PhoneException;
     }
 
     // Si la validacion salió bien, aqui se guaardan los datos
