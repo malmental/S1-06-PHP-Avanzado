@@ -4,6 +4,9 @@
   ## 🛠 Tecnologies  
   - PHP
   - HTML, CSS  
+  - Composer ->Logger, 
+             ->Faker, 
+             ->PHPUnit
   
   ## 🚀 Instal·lació  
   1. Clonar el repositori: `git clone ...`  
