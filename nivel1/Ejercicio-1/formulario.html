@@ -3,39 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de registro</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>Formulario PHP Avanzado</title>
 </head>
 <body>
-    <div class="form-container">
-        <h1>Formulario de registro</h1>
-        <form action="procesar.php" method="post">
+    <h1>Tasca S1.06.Php_Avanzado</h1>
 
-            <div class="form-group">
-                <label for="nombre">Tu nombre de usuario: </label>
-                <input type="text" id="nombre" name="nombre_usuario" required placeholder="Tu nombre" [A-Za-zá-úÁ-Ú0-9]+(?: [A-Za-zá-úÁ-Ú0-9]+)*">
-            </div>
+    <form action="session.php" method="get">
+        <label>
+            Tu nombre:
+            <input type="text" name="Nombre" id="nombre" required>
+        </label>
+        <br><br>
+        <label>
+            Tu correo electronico:
+            <input type="text" name="Email" id="email" required>
+        </label>
+        <br><br>
+        <label>
+            Tu numero de telefono:
+            <input type="number" name="Telefono" id="telefono" required>
+        </label>
+        <br><br>
+        <button>Enviar</button>
+    </form>
 
-            <div class="form-group">
-                <label for="email">Correo electronico:</label>
-                <input type="email" id="email" name="email_usuario" required placeholder="nombre@example.com">
-            </div>
-            
-            <div class="form-group">
-                <label for="biografia">Descríbete en una palabra:</label>
-                <input type="text" id="biografia" name="biografia_usuario" placeholder="Ej: aventurero">
-            </div>
-
-            <div class="form-group">
-                <label for="ciudad">A donde te gustaría viajar:</label>
-                <select name="ciudad_usuario" id="ciudad">
-                    <option value="Londres">Londres</option>
-                    <option value="Paris">París</option>
-                    <option value="Shanghai">Shanghai</option>
-                </select>
-            </div>
-            <button class="submit">Enviar</button>
-        </form>
-    </div>
 </body>
 </html>

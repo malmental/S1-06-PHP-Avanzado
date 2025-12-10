@@ -2,7 +2,8 @@
     "name": "orlandorojas/nivel3",
     "autoload": {
         "psr-4": {
-            "Orlandorojas\\Nivel3\\": "src/"
+            "Orlandorojas\\Nivel3\\": "src/",
+            "App\\": "app3-phpunit/src/"
         }
     },
     "authors": [

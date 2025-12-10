@@ -1,7 +1,7 @@
 <?php
 
 // Ejemplo 1: Sobreescribiremos el metodo __toString()
-// El metodo string de vuelve una representacion 
+
 class Persona {
     private $nombre;
     private $edad;
