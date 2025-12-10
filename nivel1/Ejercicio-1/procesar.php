@@ -13,12 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo "<p>Nombre de usuario: " . $nombre_usuario . "</p>";
     echo "<p>Correo electronico: " . $correo_electronico . "</p>";
     echo "<p>Numero de telefono: " . $numero_de_telefono . "</p>";
- 
-    $_SESSION['usuario'] = [
-        'nombre' => $nombre,
-        'email' => $email,
-        'ciudad' => $ciudad
-    ];
+
+    $_SESSION['nombre_usuario'] = $nombre_usuario;
+    $_SESSION['correo_electronico'] = $correo_electronico;
+    $_SESSION['numero_de_telefono'] = $numero_de_telefono;
 
     // Podriamos agregar un mensaje de confirmacion de registro
     $_SESSION['mensaje_registro_existoso'] = "Genial! $nombre_de_usuario!, tu registro fue exitoso!.";
