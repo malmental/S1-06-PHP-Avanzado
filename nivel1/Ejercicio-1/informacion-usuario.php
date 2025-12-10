@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php 
+session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +15,11 @@
     <?php
 
     if (isset($_SESSION['usuario'])) {
-        echo "<h1>Bienvenido </h1>" . ($_SESSION['usuario']['nombre_usuario']) . "</h1>";
-        echo "<p>Email: " . ($_SESSION['usuario']['correo_electronico']) . "</p>";
-        echo "<p>Tu telefono: " . ($_SESSION['usuario']['numero_de_telefono']) . "</p>";
+
+        echo "<h1>Bienvenido </h1>" . ($_SESSION['nombre_usuario']) . "</h1>";
+        echo "<p>Email: " . ($_SESSION['correo_electronico']) . "</p>";
+        echo "<p>Tu telefono: " . ($_SESSION['numero_de_telefono']) . "</p>";
+
     } else {
         echo "<h1>Acceso negado</h1>";
         echo "<p>Sesion no iniciada, porfavor registrate</p>";

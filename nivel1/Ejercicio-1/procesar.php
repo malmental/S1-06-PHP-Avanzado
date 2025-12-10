@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Paso 3: mostramos los valores en pantalla
     echo "<h1>Datos recibidos</h1>";
-    echo "<p>Nombre de usuario: " . "</p>";
-    echo "<p>Correo electronico: " . "</p>";
-    echo "<p>Numero de telefono: " . "</p>";
+    echo "<p>Nombre de usuario: " . $nombre_usuario . "</p>";
+    echo "<p>Correo electronico: " . $correo_electronico . "</p>";
+    echo "<p>Numero de telefono: " . $numero_de_telefono . "</p>";
  
     $_SESSION['usuario'] = [
         'nombre' => $nombre,
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_SESSION['mensaje_registro_existoso'] = "Genial! $nombre_de_usuario!, tu registro fue exitoso!.";
 
     echo "<p>Los datos se han guardado con exito!</p>";
-    echo "<a href='informacionUsuario.php'>Ver mi perfil</a>";
+    echo "<a href='informacion-usuario.php'>Ver mi perfil</a>";
 
 
 } else {
