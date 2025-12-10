@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +9,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario PHP Avanzado</title>
+
 </head>
 
 <body>
-    <h1>Tasca S1.06.Php_Avanzado</h1>
+    <h1>Formulario de registro</h1>
+
+    <?php
+
+    if (isset($_SESSION['error'])) {
+        echo "ERROR: " . $_SESSION['error'];
+        unset($_SESSION['error']);
+    }
+    ?>
+
     <form action="procesar.php" method="post">
         <label>
             Tu nombre:
@@ -17,13 +30,13 @@
         </label>
         <br><br>
         <label>
-            Tu correo electronico:
+            Correo electronico:
             <input type="text" name="correo_electronico" id="email" required>
         </label>
         <br><br>
         <label>
-            Tu numero de telefono:
-            <input type="number" name="numero_de_telefono" id="telefono" required>
+            Numero de telefono:
+            <input type="text" name="numero_de_telefono" id="telefono" required>
         </label>
         <br><br>
         <button>Enviar</button>
