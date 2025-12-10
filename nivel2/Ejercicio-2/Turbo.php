@@ -1,10 +1,10 @@
 <?php
 
-class Turbo
+trait Turbo
 {
     public function boost(): void
     {
-        echo "SE INCIA EL TURBO ⚡️" . PHP_EOL;
+        echo "SE INCIA EL TURBO" . PHP_EOL;
     }
 }
 

@@ -1,6 +1,6 @@
 <?php
 
-// Ejemplo 1: Sobreescribiremos el metodo __toString()
+// Sobreescribiremos el metodo __toString()
 
 class Persona {
     private $nombre;
@@ -20,3 +20,4 @@ class Persona {
 
 $persona = new Persona("Orlando", 38);
 echo (string) $persona . PHP_EOL;
+?>
