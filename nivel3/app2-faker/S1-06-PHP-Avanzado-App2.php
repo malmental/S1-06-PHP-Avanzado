@@ -4,6 +4,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Faker\Factory;
 
+// Operador de ambito, permite llamar metodos de clase sin tener que instanciar un objeto
 $faker = Factory::create('es_ES');
 
 $nombre = $faker->name;
@@ -18,7 +19,7 @@ echo "Telefono: $telefono" . PHP_EOL;
 
 file_put_contents(
     'datos.txt',
-    $faker->name . PHP_EOL .
+        $faker->name . PHP_EOL .
         $faker->lastName . PHP_EOL .
         $faker->email . PHP_EOL .
         $faker->phoneNumber

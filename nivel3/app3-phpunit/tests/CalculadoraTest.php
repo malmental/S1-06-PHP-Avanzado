@@ -8,23 +8,26 @@ use App\Calculadora;
 
 class CalculadoraTest extends TestCase
 {
+    // Aqui declaro el 'objeto' de prueba
     private $calculadora;
 
-    // Este método se ejecuta ANTES de cada test
+    // Este es como el constructor de los tests
     protected function setUp(): void
     {
         $this->calculadora = new Calculadora();
     }
 
+
+    // Se declara una funcion por cada cosa que se requiera testear
     public function testSumar()
     {
         $a = 5;
         $b = 3;
 
-        // Act, actuar
+        // se accede con $this al objeto y desde ahi llamamos al metodo sumar() y le da el valor a $resultado
         $resultado = $this->calculadora->sumar($a, $b);
 
-        // Assert, verificar
+        // Assert para verificar que dos variables sean iguales
         $this->assertEquals(8, $resultado);
     }
 
@@ -54,3 +57,5 @@ class CalculadoraTest extends TestCase
         $this->calculadora->dividir(10, 0);
     }
 }
+
+?>

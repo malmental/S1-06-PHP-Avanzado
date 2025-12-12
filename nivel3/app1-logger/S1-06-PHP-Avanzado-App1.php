@@ -8,10 +8,10 @@ use Monolog\Handler\StreamHandler;
 $logger = new Logger('ejemplo');
 $logger->pushHandler(new StreamHandler('log.log', Logger::WARNING));
 
-$logger->info('Este es un mensaje de información');
-$logger->notice('Este es un mensaje de advertencia');
-$logger->warning('Este es un mensaje de alerta');
-$logger->error('Este es un mensaje de error');
-$logger->critical('Este es un mensaje de crítica');
+$logger->info('Información');
+$logger->notice('Notificacion');
+$logger->warning('Peligro');
+$logger->error('Error');
+$logger->critical('Critico');
 
 ?>
