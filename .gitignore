@@ -1,5 +1,2 @@
-# Archivos de sistema y editor
 .DS_Store
-
-# Ignorar directorios de dependencias
 /nivel3/vendor/
