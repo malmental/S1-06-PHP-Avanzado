@@ -57,5 +57,6 @@ class CalculadoraTest extends TestCase
         $this->calculadora->dividir(10, 0);
     }
 }
+// Siempre rellenar el setUp() para crear un objeto de prueba; 
 
 ?>
