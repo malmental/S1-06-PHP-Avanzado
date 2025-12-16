@@ -12,5 +12,8 @@ if (!empty($_GET["Nombre"]) && ($_GET["Apellido"]) && ($_GET["Edad"]))
     $_SESSION ["Edad"] = $edad;
 
     echo "Usuario $nombre, su apellido es $apellido y tiene $edad años" . PHP_EOL;
+    
+} else {
+    echo "Los campos no pueden estar vacios";
 }
 
